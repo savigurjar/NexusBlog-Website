@@ -4,6 +4,7 @@ import { assets, blog_data, comments_data } from '../assets/assets';
 import Navbar from '../components/Navbar';
 import Moment from 'moment';
 import Footer from '../components/Footer';
+import Loader from '../components/Loader';
 
 function Blog() {
   const { id } = useParams();
@@ -118,21 +119,17 @@ function Blog() {
         {/* Share Buttons */}
         <div className="my-24 max-w-3xl mx-auto">
           <p className="font-semibold my-4">Share this article on social media</p>
-          <div className="flex gap-4">
-            <img src={assets.facebook_icon} width={40} alt="Facebook" />
-            <img src={assets.twitter_icon} width={40} alt="Twitter" />
-            <img src={assets.googleplus_icon} width={40} alt="Google Plus" />
+          <div className="flex gap-4 ">
+            <img className='cursor-pointer' src={assets.facebook_icon} width={40} alt="Facebook" />
+            <img className='cursor-pointer' src={assets.twitter_icon} width={40} alt="Twitter" />
+            <img className='cursor-pointer' src={assets.googleplus_icon} width={40} alt="Google Plus" />
           </div>
         </div>
       </div>
 
       <Footer />
     </div>
-  ) : (
-    <div className="min-h-screen flex items-center justify-center text-gray-500">
-      Loading blog...
-    </div>
-  );
+  ) : <Loader/>
 }
 
 export default Blog;
