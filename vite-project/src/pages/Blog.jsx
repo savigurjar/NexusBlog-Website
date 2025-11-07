@@ -40,11 +40,11 @@ function Blog() {
 
   return data ? (
     <div className="relative">
-      <img src={assets.gradientBackground} alt="" className="absolute -top-32 -z-10" />
+      {/* <img src={assets.gradientBackground} alt="" className="absolute -top-32 -z-10" /> */}
       <Navbar />
 
       {/* Blog Header */}
-      <div className="text-center mt-20 text-gray-600">
+      <div className="text-center mt-20 text-gray-400">
         <p className="text-primary py-4 font-medium">
           Published on {Moment(data.createdAt).format('MMM Do YYYY')}
         </p>

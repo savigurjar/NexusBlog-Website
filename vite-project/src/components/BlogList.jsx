@@ -9,7 +9,8 @@ function BlogList() {
     return (
         <div>
             {/* Categories Navigation */}
-            <div className='flex justify-center gap-4 sm:gap-8 my-10'>
+            {/* <div className='flex justify-center gap-4 sm:gap-8 my-10'> */}
+             <div   className="flex justify-center items-center mt-5 mb-5 px-3 py-4 overflow-hidden bg-gradient-to-br from-[#101414] via-[#151718] to-[#151616] text-white ">
                 {blogCategories.map((item) => (
                     <div key={item} className='relative'>
                         <button
